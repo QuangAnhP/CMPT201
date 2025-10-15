@@ -33,16 +33,18 @@ void traverse(struct Node *head) {
   printf("NULL\n");
 }
 
-void reverse(struct Node *head) {
+struct Node *reverse(struct Node *head) {
   struct Node *current = head;
   struct Node *prev = NULL;
   struct Node *next = head->next;
-  while (next != NULL) {
+  while (current != NULL) {
+    next = current->next;
     current->next = prev;
-    next->next = current;
     prev = current;
-    // TODO
+    current = next;
   }
+  // Return new head
+  return prev;
 }
 
 int main() {
@@ -54,6 +56,10 @@ int main() {
 
   //  Traverse and print
   printf("Linked List: ");
+  traverse(head);
+
+  head = reverse(head);
+  printf("Reverse Linked List: ");
   traverse(head);
 
   // Free memory
