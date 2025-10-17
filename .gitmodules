@@ -1,3 +1,6 @@
 [submodule "ica1-QuangAnhP"]
 	path = ica1-QuangAnhP
 	url = git@github.com:SFU-CMPT-201/ica1-QuangAnhP.git
+[submodule "inClassExercise/ica2-QuangAnhP"]
+	path = inClassExercise/ica2-QuangAnhP
+	url = git@github.com:SFU-CMPT-201/ica2-QuangAnhP.git
